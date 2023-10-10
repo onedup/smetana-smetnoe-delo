@@ -18,7 +18,10 @@ html {
   margin: 0;
   min-width: 320px;
   min-height: 100%;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--color-black);
+  background-color: var(--wild-sand);
 }
 
 img {
@@ -36,8 +39,7 @@ a {
 }
 
 .is-hidden {
-  display: none !important;
-  /* stylelint-disable-line declaration-no-important */
+  display: none !important; /* stylelint-disable-line declaration-no-important */
 }
 
 .btn-reset {
@@ -109,3 +111,8 @@ a {
   position: relative;
 }
 
+.btn {
+  border-radius: 10px;
+  color: var(--color-light);
+  background-color: var(--curious-blue);
+}

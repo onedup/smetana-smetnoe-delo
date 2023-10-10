@@ -2,13 +2,14 @@
 // colors
 :root {
   // base
-  --font-family: "Roboto", sans-serif;
-  --content-width: 1360px;
-  --container-offset: 40px;
+  --font-family: "Inter", sans-serif;
+  --content-width: 1302px;
+  --container-offset: 68px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
   --color-light: #fff;
-
-
+  --color-black: #000;
+  --wild-sand: #f5f5f5;
+  --curious-blue: #378ad7;
 }
