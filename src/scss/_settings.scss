@@ -39,7 +39,8 @@ a {
 }
 
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
 }
 
 .btn-reset {
@@ -113,6 +114,24 @@ a {
   border-radius: 10px;
   color: var(--color-light);
   background-color: var(--curious-blue);
+  transition: 0.2s ease;
+
+  &:hover {
+    background-color: var(--color-black);
+    transition: 0.2s ease;
+  }
+
+  &--light {
+    color: var(--curious-blue);
+    background-color: var(--color-light);
+    transition: 0.2s ease;
+
+    &:hover {
+      color: var(--color-light);
+      background-color: var(--color-black);
+      transition: 0.2s ease;
+    }
+  }
 }
 
 .title {
@@ -123,6 +142,17 @@ a {
 
   &--uppercase {
     text-transform: uppercase;
+  }
+}
+
+.subtitle {
+  margin: 0;
+  font-weight: 500;
+  font-size: 24px;
+  text-transform: uppercase;
+
+  &--light {
+    color: var(--color-light);
   }
 }
 
