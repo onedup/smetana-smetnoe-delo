@@ -11,12 +11,33 @@
     margin-right: 48px;
     width: 96px;
     height: 89px;
+
+    @include minidesk {
+      margin-right: 20px;
+    }
   }
 
   &__btn {
     display: inline-block;
     padding: 14px 49px;
     font-size: 16px;
+
+    @include tablet {
+      display: none;
+    }
+
+    &--nav {
+      display: none;
+
+      @include tablet {
+        display: block;
+        padding: 14px 60px;
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -24,11 +45,58 @@
   &__list {
     display: flex;
     gap: 60px;
+
+    @include minidesk {
+      gap: 30px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @include mobile {
+      padding-left: 10px;
+    }
   }
 
   &__link {
     font-family: var(--font-family);
     font-size: 16px;
     color: var(--color-black);
+
+    @include tablet {
+      font-size: 30px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  @include tablet {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    width: 80%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    background-color: var(--color-light);
+    transform: translateX(200%);
+    transition: transform 0.3s ease;
+  }
+
+  @include mobile {
+    padding: 60px 17px 13px;
+  }
+
+  &--active {
+    transform: none;
+    transition: transform 0.3s ease;
   }
 }

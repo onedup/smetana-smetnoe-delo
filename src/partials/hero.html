@@ -1,0 +1,37 @@
+<section class="hero">
+  <div class="container hero__container">
+    <div class="hero__background-1"></div>
+    <div class="hero__background-2"></div>
+    <h2 class="title hero__title title--uppercase centered">Удаленная профессия <span class="highlight">Инженер-сметчик</span></h2>
+    <span class="hero__caption centered">Обучение с 0 и повышение квалификации</span>
+    <picture class="hero__image">
+      <source srcset="img/hero-img-small.png" media="(max-width: 1024px) " width="500px">
+      <img src="img/hero-img.png" alt="Man studying">
+    </picture>
+    <span class="hero__descr centered">Запишись на бесплатный вебинар</span>
+    <button class="btn-reset btn hero__btn _modal-open" data-modal-open="modal-reg">Записаться</button>
+    <div class="modal _modal" data-modal="modal-reg">
+      <div class="modal__box">
+        <button class="btn-reset modal__close" aria-label="close modal">
+          <svg>
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <h2 class="title title--uppercase centered modal__title">Запишись <span class="highlight">на бесплатный вебинар</span></h2>
+        <span class="modal__caption centered">И начни свой путь в <span class="highlight">сметном деле</span></span>
+        <form class="modal__form reg-form" action="">
+          <label class="reg-form__label">
+            <input type="text" name="name" placeholder="Имя" class="reg-form__input">
+          </label>
+          <label class="reg-form__label">
+            <input type="tel" name="phone" placeholder="+7 (999) 999-99-99" class="reg-form__input">
+          </label>
+          <label class="reg-form__label">
+            <input type="email" name="email" placeholder="e-mail" class="reg-form__input">
+          </label>
+          <button class="btn-reset btn reg-form__btn">Записаться</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

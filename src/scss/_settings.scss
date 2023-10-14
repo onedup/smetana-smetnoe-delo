@@ -85,8 +85,6 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
-
-
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
@@ -115,4 +113,117 @@ a {
   border-radius: 10px;
   color: var(--color-light);
   background-color: var(--curious-blue);
+}
+
+.title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.25;
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+}
+
+.highlight {
+  color: var(--curious-blue);
+}
+
+.burger {
+  --burger-width: 30px;
+  --burger-height: 20px;
+  --burger-line-height: 2px;
+
+  position: relative;
+  z-index: 250;
+  display: none;
+  border: none;
+  padding: 0;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  color: var(--curious-blue);
+  background-color: transparent;
+  cursor: pointer;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: var(--burger-line-height);
+  background-color: currentColor;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  top: calc(100% - var(--burger-line-height));
+}
+
+.burger__line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: var(--burger-line-height);
+  background-color: currentColor;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger--active {
+  overflow: hidden;
+}
+
+.burger--active::before {
+  top: 50%;
+  color: var(--color-black);
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.burger--active::after {
+  top: 50%;
+  color: var(--color-black);
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out color 0.3s ease-in-out;
+}
+
+.burger--active .burger__line {
+  color: var(--color-black);
+  transform: scale(0);
+  transition: transform 0.1s ease-in-out color 0.3s ease-in-out;
+}
+
+.burger:focus::after {
+  opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.52);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
 }

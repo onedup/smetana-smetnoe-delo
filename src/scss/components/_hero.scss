@@ -1,3 +1,137 @@
 .hero {
+  padding-top: 28px;
+  padding-bottom: 80px;
 
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+
+    @include tablet {
+      font-size: 28px;
+    }
+
+    @include mobile {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+  }
+
+  &__caption {
+    margin-bottom: 17px;
+    font-size: 20px;
+
+    @include mobile {
+      max-width: 265px;
+      font-size: 14px;
+    }
+  }
+
+  &__image {
+    align-self: center;
+    margin-right: 58px;
+    margin-bottom: 22px;
+    max-width: 881px;
+
+    @include tablet {
+      margin-right: 0;
+    }
+
+    @include small-tablet {
+      max-width: 400px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 22px;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.64);
+
+    @include small-tablet {
+      max-width: 245px;
+      font-size: 16px;
+    }
+  }
+
+  &__btn {
+    border-radius: 16px;
+    padding: 18px 77px;
+    font-size: 30px;
+
+    @include small-tablet {
+      padding: 15px 87px;
+      font-size: 16px;
+    }
+  }
+
+  &__background-1 {
+    position: absolute;
+    left: 50px;
+    top: 121px;
+    width: 142px;
+    height: 129px;
+    background-image: url('../img/triangle-ruler.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include minidesk {
+      width: 100px;
+      height: 90px;
+    }
+
+    @include small-tablet {
+      // background-size: 100%;
+      left: 21px;
+      top: 80px;
+      width: 68px;
+      height: 64px;
+    }
+
+    @include mobile {
+      // top: 90px;
+      width: 45px;
+      height: 38px;
+    }
+  }
+
+  &__background-2 {
+    position: absolute;
+    right: -23px;
+    top: 165px;
+    width: 128px;
+    height: 129px;
+    background-image: url('../img/pencil.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include minidesk {
+      width: 90px;
+      height: 88px;
+    }
+
+    @include small-tablet {
+      right: -10px;
+      top: 45px;
+      width: 60px;
+      height: 70px;
+    }
+
+    @include mobile {
+      top: 30px;
+      width: 50px;
+      height: 55px;
+    }
+  }
+
+  @include mobile {
+    padding-top: 0;
+  }
 }

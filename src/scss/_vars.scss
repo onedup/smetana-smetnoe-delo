@@ -7,6 +7,10 @@
   --container-offset: 68px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
+  @include small-tablet {
+    --container-offset: 25px;
+  }
+
   // colors
   --color-light: #fff;
   --color-black: #000;
