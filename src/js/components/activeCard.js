@@ -1,18 +1,7 @@
-const cards = document.querySelectorAll('.level-card'),
-      slides = document.querySelectorAll('.swiper-slide');
-
-      console.log(slides);
-slides.forEach(slide => {
-  slide.addEventListener('mousedown', (e) => {
-  if (e.target.classList.contains("swiper-slide-active")) {
-    console.log(slide.firstChild);
-  }
-  })
-
-});
+const cards = document.querySelectorAll('.level-card');
 
 cards.forEach(card => {
-  card.addEventListener('mouseover', (e) => {
+  card.addEventListener('mouseover', () => {
     cards.forEach(otherCard => {
       if (otherCard != card) {
         otherCard.classList.remove('level-card--active')

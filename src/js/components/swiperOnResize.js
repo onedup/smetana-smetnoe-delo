@@ -15,11 +15,28 @@ window.addEventListener("DOMContentLoaded", () => {
         callback(swiper);
       }
     };
+    const cards = document.querySelectorAll(".level-card");
+
+    const cardHover = (e) => {
+      cards.forEach((otherCard) => {
+        if (otherCard != e) {
+          otherCard.classList.remove("level-card--active");
+        }
+      });
+      console.log(e);
+      if (e.target.closest('.level-card')) e.target.closest('.level-card').classList.add("level-card--active");
+    };
 
     const checker = function () {
       if (breakpoint.matches) {
+        cards.forEach((card) => {
+          card.removeEventListener("mouseover", cardHover);
+        });
         return enableSwiper(swiperClass, swiperSettings);
       } else {
+        cards.forEach((card) => {
+          card.addEventListener("mouseover", cardHover);
+        });
         if (swiper !== undefined) swiper.destroy(true, true);
         return;
       }
@@ -29,14 +46,13 @@ window.addEventListener("DOMContentLoaded", () => {
     checker();
   };
 
-  const someFunc = (instance) => {
+  const activeAllCards = (instance) => {
     const cards = document.querySelectorAll(".level-card");
     if (instance) {
-      instance.on("slideChange", function (e) {
-        cards.forEach((card) => {
-            card.classList.remove("level-card--active");
-          });
-        instance.slides[instance.activeIndex].childNodes[1].classList.add("level-card--active");
+      cards.forEach((card) => {
+        if (!card.classList.contains("level-card--active")) {
+          card.classList.add("level-card--active");
+        }
       });
     }
   };
@@ -46,11 +62,10 @@ window.addEventListener("DOMContentLoaded", () => {
     ".level__swiper",
     {
       // loop: true,
-      watchSlidesProgress: true,
+      // centeredSlides: true,
       slidesPerView: 1.2,
       slidesOffsetBefore: +containerOffset.slice(0, -2),
       slidesOffsetAfter: +containerOffset.slice(0, -2),
-      rewind: true,
       spaceBetween: 12,
       scrollbar: {
         el: ".swiper-scrollbar",
