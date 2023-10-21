@@ -23,7 +23,6 @@
     }
 
     @include mobile {
-      // margin-bottom: 12px;
       font-size: 20px;
     }
   }
@@ -56,13 +55,9 @@
   grid-column: 4 span;
 }
 
-// .swiper {
-//   width: 100%;
-// }
-
 .level-card {
   border-radius: 20px;
-  padding: 50px 20px 35px 50px;
+  padding: 50px 25px 35px 50px;
   background-color: rgba(0, 0, 0, 0.25);
   transition: 0.3s ease;
 
@@ -114,7 +109,6 @@
     @include minidesk {
       font-size: 16px;
     }
-
 
     @include tablet {
       font-size: 14px;

@@ -21,7 +21,7 @@ html {
   font-weight: 400;
   font-size: 18px;
   color: var(--color-black);
-  background-color: var(--wild-sand);
+  background-color: var(--color-light);
 }
 
 img {
@@ -153,6 +153,10 @@ a {
 
   &--light {
     color: var(--color-light);
+  }
+
+  &--blue {
+    color: var(--curious-blue);
   }
 }
 

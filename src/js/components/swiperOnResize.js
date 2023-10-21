@@ -23,7 +23,6 @@ window.addEventListener("DOMContentLoaded", () => {
           otherCard.classList.remove("level-card--active");
         }
       });
-      console.log(e);
       if (e.target.closest('.level-card')) e.target.closest('.level-card').classList.add("level-card--active");
     };
 
@@ -61,8 +60,6 @@ window.addEventListener("DOMContentLoaded", () => {
     "(max-width: 1024px)",
     ".level__swiper",
     {
-      // loop: true,
-      // centeredSlides: true,
       slidesPerView: 1.2,
       slidesOffsetBefore: +containerOffset.slice(0, -2),
       slidesOffsetAfter: +containerOffset.slice(0, -2),
@@ -82,6 +79,6 @@ window.addEventListener("DOMContentLoaded", () => {
         },
       },
     },
-    someFunc
+    activeAllCards
   );
 });

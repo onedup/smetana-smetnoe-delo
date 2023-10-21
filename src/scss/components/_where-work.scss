@@ -1,0 +1,138 @@
+.where-work {
+  padding-top: 136px;
+  padding-bottom: 80px;
+
+  &__title {
+
+    @include minidesk {
+      margin-bottom: 30px;
+    }
+
+    @include tablet {
+      font-size: 28px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 23px;
+    padding-left: 49px;
+
+    @include minidesk {
+      padding: 0;
+    }
+
+    @include tablet {
+      gap: 10px;
+    }
+
+    @include small-tablet {
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
+  }
+
+  &__img {
+    width: 430px;
+
+    @include middesk {
+      width: 350px;
+    }
+
+    @include minidesk {
+      width: 300px;
+    }
+
+    @include tablet {
+      width: 250px;
+    }
+
+    @include mobile {
+      width: 218px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 300px));
+    // grid-template-rows: repeat(2, minmax(auto, 265px));
+    column-gap: 20px;
+    row-gap: 15px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+
+    @include minidesk {
+      padding: 0;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, minmax(auto, 150px));
+    }
+  }
+}
+
+.card {
+  border-radius: 20px;
+  padding: 46px 16px 60px;
+  box-shadow: 0px 2px 80px 0px rgba(223, 223, 223, 0.78);
+
+  &__subtitle {
+    margin-bottom: 60px;
+
+    @include minidesk {
+      margin-bottom: 35px;
+      font-size: 22px;
+    }
+
+    @include tablet {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    @include mobile {
+      margin-bottom: 7px;
+      font-size: 10px;
+    }
+  }
+
+  &__list {
+    list-style-type: disc;
+    padding-left: 26px;
+
+    @include mobile {
+      padding-left: 14px;
+    }
+  }
+
+  &__item {
+    font-size: 18px;
+    line-height: 1.414;
+    color: var(--color-black);
+
+    @include minidesk {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include mobile {
+      font-size: 8px;
+    }
+  }
+
+  @include minidesk {
+    padding-bottom: 40px;
+  }
+
+  @include mobile {
+    padding: 24px 12px;
+  }
+}
