@@ -19,12 +19,18 @@
     margin-bottom: 40px;
 
     @include tablet {
+      margin-bottom: 20px;
       font-size: 28px;
     }
 
     @include mobile {
       font-size: 20px;
     }
+  }
+
+  @include tablet {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 
@@ -163,7 +169,7 @@
   }
 
   @include tablet {
-    padding: 20px 24px 20px 40px;
+    padding: 20px 24px 20px 30px;
   }
 
   @include mobile {

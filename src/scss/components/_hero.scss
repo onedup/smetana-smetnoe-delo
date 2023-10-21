@@ -131,6 +131,11 @@
     }
   }
 
+  @include tablet{
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
   @include mobile {
     padding-top: 0;
   }
