@@ -210,14 +210,14 @@ a {
   top: 50%;
   width: 100%;
   height: var(--burger-line-height);
-  background-color: currentColor;
+  background-color: currentcolor;
   transform: translateY(-50%);
   transition: transform 0.3s ease-in-out;
 }
 
-.burger--active {
-  overflow: hidden;
-}
+// .burger--active {
+//   overflow: hidden;
+// }
 
 .burger--active::before {
   top: 50%;
