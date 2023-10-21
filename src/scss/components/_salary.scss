@@ -1,0 +1,40 @@
+.salary {
+  padding-top: 102px;
+  padding-bottom: 80px;
+
+  &__title {
+    margin-bottom: 52px;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 10px;
+  }
+
+  &__img {
+    // margin: 0 auto;
+    margin-top: -25px;
+    width: 400px;
+  }
+}
+
+.salary-hh {
+  display: flex;
+  align-items: center;
+  max-width: 320px;
+  gap: 17px;
+
+  &__img {
+    width: 26px;
+    height: 26px;
+  }
+
+  &__caption {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.20523;
+    color: #727272;
+  }
+}
