@@ -4,7 +4,7 @@
 
   &__container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
     @include tablet {
       flex-direction: column;
@@ -20,6 +20,15 @@
     align-items: flex-start;
     justify-content: space-between;
     padding-top: 65px;
+    padding-left: 95px;
+
+    @include middesk {
+      padding-left: 40px;
+    }
+
+    @include minidesk {
+      padding-left: 0;
+    }
 
     @include tablet {
       padding-top: 0;
@@ -62,7 +71,14 @@
   }
 
   &__img {
+    padding-right: 81px;
+
+    @include middesk {
+      padding-right: 30px;
+    }
+
     @include minidesk {
+      padding-right: 0;
       width: 380px;
     }
 
@@ -76,7 +92,7 @@
   }
 
   @include tablet {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }

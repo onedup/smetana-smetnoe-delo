@@ -1,34 +1,74 @@
 .salary {
-  padding-top: 102px;
+  padding-top: 105px;
   padding-bottom: 80px;
 
   &__title {
     margin-bottom: 52px;
+
+    @include tablet {
+      font-size: 28px;
+    }
+
+    @include mobile {
+      margin-bottom: 67px;
+      font-size: 20px;
+    }
   }
 
   &__content {
     position: relative;
     display: flex;
-    align-items: flex-start;
-    padding-left: 10px;
+    justify-content: center;
+
+    @include mobile {
+      margin: 0 auto;
+      max-width: 320px;
+    }
   }
 
   &__img {
-    // margin: 0 auto;
-    margin-top: -25px;
+    margin-top: -30px;
+    margin-right: 18px;
     width: 400px;
+
+    @include tablet {
+      width: 300px;
+    }
+
+    @include mobile {
+      margin-top: 0;
+      width: 265px;
+    }
+  }
+
+  @include tablet {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
 .salary-hh {
+  position: absolute;
+  left: 10px;
+  top: 0;
   display: flex;
-  align-items: center;
-  max-width: 320px;
+  width: 320px;
   gap: 17px;
 
   &__img {
+    margin-top: 3px;
     width: 26px;
     height: 26px;
+
+    @include tablet {
+      width: 22px;
+      height: 22px;
+    }
+
+    @include small-tablet {
+      width: 16px;
+      height: 16px;
+    }
   }
 
   &__caption {
@@ -36,5 +76,113 @@
     font-size: 18px;
     line-height: 1.20523;
     color: #727272;
+
+    @include tablet {
+      font-size: 14px;
+    }
+
+    @include small-tablet {
+      font-size: 11px;
+    }
+  }
+
+  @include tablet {
+    width: 285px;
+  }
+
+  @include small-tablet {
+    width: 227px;
+  }
+
+  @include mobile {
+    left: -5px;
+    top: -40px;
+  }
+}
+
+.salary-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  width: 224px;
+  height: 194px;
+  box-shadow: 0px 2px 80px 0px rgba(223, 223, 223, 0.78);
+  background-color: var(--color-light);
+
+  &__img {
+    width: 85%;
+  }
+
+  &--100k {
+    left: 18%;
+    top: 14%;
+
+    @include tablet {
+      left: 10%;
+    }
+
+    @include mobile {
+      left: 0;
+      top: 2%;
+    }
+  }
+
+  &--70k {
+    left: 15%;
+    bottom: 4%;
+
+    @include tablet {
+      left: 8%;
+    }
+
+    @include mobile {
+      left: 0;
+      bottom: 125px;
+    }
+  }
+
+  &--60k {
+    right: 13%;
+    top: -2%;
+
+    @include tablet {
+      right: 9%;
+    }
+
+    @include mobile {
+      right: -7%;
+    }
+  }
+
+  &--80k {
+    right: 10%;
+    bottom: 9%;
+
+    @include tablet {
+      right: 7%;
+    }
+
+    @include mobile {
+      right: -9%;
+      top: 30%;
+      bottom: 0;
+    }
+  }
+
+  @include tablet {
+    width: 180px;
+    height: 156px;
+  }
+
+  @include small-tablet {
+    width: 144px;
+    height: 125px;
+  }
+
+  @include mobile {
+    width: 98px;
+    height: 84px;
   }
 }
