@@ -87,7 +87,6 @@
     }
 
     @include small-tablet {
-      // background-size: 100%;
       left: 21px;
       top: 80px;
       width: 68px;
@@ -95,9 +94,8 @@
     }
 
     @include mobile {
-      // top: 90px;
       width: 45px;
-      height: 38px;
+      height: 41px;
     }
   }
 
