@@ -1,0 +1,50 @@
+<section class="test">
+  <div class="container test__container">
+    <div class="test__inner">
+      <h2 class="subtitle subtitle--blue subtitle--fw400 test__subtitle centered">Пройди тест который покажет подойдет
+        ли тебе эта профессия</h2>
+      <button class="btn-reset btn test__btn _modal-open" data-modal-open="modal-test">Пройти тест</button>
+    </div>
+  </div>
+  <div class="modal _modal" data-modal="modal-test">
+    <div class="modal__box modal__box--test">
+      <button class="btn-reset modal__close" aria-label="close modal">
+        <svg>
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <form class="modal__form test-form" action="">
+        <ol class="list-reset test-form__list">
+          <li class="test-form__item">
+            <span class="test-form__caption">Хочешь быть сметчиком?</span>
+            <label class="test-form__label">
+              <input type="radio" name="question-1" value="yes" class="real-radio"><span class="fake-radio"></span>Хочу
+            </label>
+            <label class="test-form__label">
+              <input type="radio" name="question-1" value="no" class="real-radio"><span class="fake-radio"></span>Не хочу
+            </label>
+          </li>
+          <li class="test-form__item">
+            <span class="test-form__caption">Хочешь быть сметчиком?</span>
+            <label class="test-form__label">
+              <input type="radio" name="question-2" value="yes" class="real-radio"><span class="fake-radio"></span>Хочу
+            </label>
+            <label class="test-form__label">
+              <input type="radio" name="question-2" value="no" class="real-radio"><span class="fake-radio"></span>Не хочу
+            </label>
+          </li>
+          <li class="test-form__item">
+            <span class="test-form__caption">Хочешь быть сметчиком?</span>
+            <label class="test-form__label">
+              <input type="radio" name="question-3" value="yes" class="real-radio"><span class="fake-radio"></span>Хочу
+            </label>
+            <label class="test-form__label">
+              <input type="radio" name="question-3" value="no" class="real-radio"><span class="fake-radio"></span>Не хочу
+            </label>
+          </li>
+        </ol>
+        <button class="btn-reset btn test-form__btn">Завершить</button>
+      </form>
+    </div>
+  </div>
+</section>

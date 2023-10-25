@@ -166,6 +166,10 @@ a {
   &--blue {
     color: var(--curious-blue);
   }
+
+  &--fw400 {
+    font-weight: 400;
+  }
 }
 
 .highlight {
