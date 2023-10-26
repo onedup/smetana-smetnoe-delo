@@ -33,18 +33,28 @@
       padding-right: 63px;
       padding-left: 63px;
       min-width: 500px;
+
+      @include tablet {
+        min-width: 400px;
+      }
+
+      @include small-tablet {
+        min-width: 350px;
+      }
+
+      @include mobile {
+        min-width: 304px;
+      }
     }
 
     @include tablet {
-      padding: 30px 25px 40px;
+      padding: 50px 25px 40px;
     }
 
     @include mobile {
       border-radius: 20px;
-      padding: 25px 25px 20px;
+      padding: 50px 25px 20px;
     }
-
-
   }
 
   &__close {
@@ -63,9 +73,9 @@
         height: 36px;
       }
 
-      @include mobile {
-        width: 30px;
-        height: 31px;
+      @include small-tablet {
+        width: 21px;
+        height: 21px;
       }
     }
 

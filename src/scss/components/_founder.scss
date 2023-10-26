@@ -3,7 +3,7 @@
   padding-bottom: 80px;
 
   &__container {
-    padding-top: 131px;
+    padding-top: 95px;
     padding-right: 160px;
     padding-left: 160px;
 
@@ -13,6 +13,7 @@
     }
 
     @include small-tablet {
+      padding-top: 70px;
       padding-right: 25px;
       padding-left: 25px;
     }
@@ -79,7 +80,6 @@
 
     &--margin {
       margin-bottom: 18px;
-
     }
 
     &--black {
