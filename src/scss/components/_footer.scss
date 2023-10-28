@@ -6,16 +6,81 @@
   &__container {
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      position: relative;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__logo {
+    @include tablet {
+      flex: 1;
+      flex-basis: 32%;
+    }
+
+    @include tablet {
+      margin-bottom: 44px;
+    }
+  }
+
+  &__logo-img {
+    @include small-tablet {
+      width: 72px;
+      height: 59px;
+    }
+  }
+
+  &__list {
+    @include tablet {
+        flex: 1;
+        flex-basis: 68%;
+      }
+    &--nav {
+      @include tablet {
+        flex-basis: 32%;
+        order: 2;
+      }
+    }
+
+    &--privacy,
+    &--contacts {
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+      }
+    }
+
+    &--privacy {
+      @include tablet {
+        order: 3;
+      }
+    }
+
+    &--contacts {
+      @include tablet {
+        align-content: end;
+        order: 1;
+      }
+    }
+
+
   }
 
   &__item {
     &:not(:last-child) {
       margin-bottom: 18px;
+
+      @include small-tablet {
+        margin-bottom: 14px;
+      }
     }
   }
 
   &__link {
     position: relative;
+    display: inline-block;
     font-size: 20px;
     color: var(--color-light);
 
@@ -36,11 +101,35 @@
         opacity: 1;
       }
     }
+
+    &--desk {
+      @include small-tablet {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include small-tablet {
+        display: inline-block;
+      }
+    }
+
+    @include small-tablet {
+      font-size: 12px;
+    }
   }
 
   &__socials {
     display: flex;
     gap: 29px;
+
+    @include tablet {
+      position: absolute;
+      right: var(--container-offset);
+      bottom: 0;
+    }
   }
 
   &__social-link {
@@ -60,6 +149,11 @@
     &:hover .footer__social-icon {
       fill: var(--color-light);
     }
+
+    @include small-tablet {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &__social-icon {
@@ -73,6 +167,15 @@
 
     &--whatsapp {
       margin-left: 1px;
+
+      @include small-tablet {
+        margin: 0;
+      }
+    }
+
+    @include small-tablet {
+      width: 14px;
+      height: 12px;
     }
   }
 }
