@@ -27,15 +27,16 @@
   &__logo-img {
     @include small-tablet {
       width: 72px;
-      height: 59px;
+      height: 57px;
     }
   }
 
   &__list {
     @include tablet {
-        flex: 1;
-        flex-basis: 68%;
-      }
+      flex: 1;
+      flex-basis: 68%;
+    }
+
     &--nav {
       @include tablet {
         flex-basis: 32%;
